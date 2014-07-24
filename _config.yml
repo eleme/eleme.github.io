@@ -1,0 +1,16 @@
+name: Eleme
+url: "http://eleme.io"
+
+markdown: redcarpet
+
+redcarpet:
+  extensions:
+    - fenced_code_blocks
+    - no_intra_emphasis
+    - autolink
+    - tables
+
+pygments: true
+permalink: /blog/:year/:title/
+paginate: 50
+paginate_path: "blog/page/:num/"

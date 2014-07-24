@@ -1,0 +1,32 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[{{ site.name }}]]></title>
+    <link href="{{ site.url }}/feed.xml" rel="self" />
+    <link href="{{ site.url }}/" />
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}/</id>
+    {% for post in site.posts limit:10 %}
+    <entry>
+        <title type="html"><![CDATA[{{ post.title }}]]></title>
+        <link href="{{ site.url }}{{ post.url }}"/>
+        {% if post.author && post.author in site.data.members %}
+        {% assign author = site.data.members[post.author] %}
+        <author>
+            <name>{{ author.name }}</name>
+            {% if author.url %}
+            <uri>{{ author.url }}</uri>
+            {% endif %}
+        </author>
+        {% endif %}
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <published>{{ post.date | date_to_xmlschema }}</published>
+        <id>{{ site.url }}{{ post.url }}</id>
+        <content type="html" xml:base="{{ site.url }}/" xml:lang="en">
+            <![CDATA[ {{ post.content }} ]]>
+        </content>
+    </entry>
+    {% endfor %}
+</feed>
