@@ -69,6 +69,9 @@ html, body {
 .entry-content {
   margin-bottom: 60px;
 }
+.entry-comments {
+  margin: 40px 0;
+}
 .hentry .vcard {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
