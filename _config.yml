@@ -13,7 +13,7 @@ redcarpet:
 
 pygments: true
 permalink: /blog/:year/:title/
-paginate: nil
+paginate: 1000
 paginate_path: "blog/page/:num/"
 exclude:
   - README.md
