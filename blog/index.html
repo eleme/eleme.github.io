@@ -1,17 +1,29 @@
 ---
-layout: blog
-title: The Qlog
+layout: default
+title: 博客
 ---
 
-<ul class="entry-list">
+<div class="entry-list yue">
+  {% assign first_blog = true %}
   {% for post in site.posts %}
-    <li class="entry-item">
-      <div class="entry-meta">
-        <time class="updated">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </div>
-      <div class="detail">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </div>
-    </li>
+  {% if first_blog %}
+  <div class="hentry" itemscope itemtype="http://schema.org/Article">
+    <div class="entry-meta">
+      <h2 class="entry-title" itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <time class="updated" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" pubdate>{{ post.date | date: "%B %d, %Y" }}</time>
+      {% if post.author %}
+      <span class="sep">—</span>
+      <span class="author">{{ post.author }}</span>
+      {% endif %}
+    </div>
+    <div class="entry-content" itemprop="articleBody">{{ post.content }}</div>
+  </div>
+  {% assign first_blog = false %}
+  {% else %}
+  <div class="entry-item">
+    <h2 class="entry-title" itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <time class="updated" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" pubdate>{{ post.date | date: "%B %d, %Y" }}</time>
+  </div>
+  {% endif %}
   {% endfor %}
-</ul>
+</div>

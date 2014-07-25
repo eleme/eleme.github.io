@@ -1,0 +1,21 @@
+{% if page.author && page.author in site.data.members %}
+{% assign author = site.data.members[page.author] %}
+<div class="vcard author">
+  <a class="avatar" href="{{ author.url }}"><img class="photo" src="{{ author.avatar }}" alt="{{ page.author }}"></a>
+  <div class="author-info">
+    <div class="author-links">
+      <a class="fn url" href="{{ author.url }}">{{ author.name }}</a>
+      {% if author.github %}
+      <a class="icon icon-github" href="https://github.com/{{ author.github }}" aria-label="GitHub"></a>
+      {% endif %}
+      {% if author.twitter %}
+      <a class="icon icon-twitter" href="https://twitter.com/{{ author.twitter}}" aria-label="Twitter"></a>
+      {% endif %}
+      {% if author.weibo %}
+      <a class="icon icon-weibo" href="http://weibo.com/{{ author.weibo}}" aria-label="Weibo"></a>
+      {% endif %}
+    </div>
+    {% if author.prose %}<p class="prose">{{ author.prose }}</p>{% endif %}
+  </div>
+</div>
+{% endif %}

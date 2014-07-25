@@ -1,8 +1,11 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} — {{ site.name }}</title>
+  <title>{{ site.name }}</title>
   <link rel="stylesheet" href="/static/vendor.css">
   <link rel="stylesheet" href="/static/site.css">
 </head>
@@ -14,8 +17,19 @@
     </div>
   </header>
   <div id="main">
-    <div class="container">
-      {{ content }}
+    <div class="container homepage yue">
+      <a class="blog" href="/blog/">
+        <span class="icon icon-quill"></span>
+        <h2>Blog</h2>
+      </a>
+      <a class="meetup" href="/meetup/">
+        <span class="icon icon-spinner"></span>
+        <h2>Meetup</h2>
+      </a>
+      <a class="projects" href="/projects/">
+        <span class="icon icon-lab"></span>
+        <h2>Projects</h2>
+      </a>
     </div>
   </div>
   <footer id="footer">
@@ -25,3 +39,4 @@
   </footer>
 </body>
 </html>
+

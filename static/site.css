@@ -1,0 +1,186 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  box-sizing: border-box;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 0;
+  zoom: 1;
+}
+.container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* layout */
+#header .container {
+  border-bottom: 1px solid #f1f1f1;
+}
+.logo {
+  float: left;
+}
+.navigation {
+  float: right;
+  font-family: serif;
+}
+.navigation a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#main {
+  -webkit-font-smoothing: antialiased;
+}
+
+#footer {
+  padding-top: 30px;
+}
+#footer a {
+  text-decoration: none;
+}
+#footer .copyright {
+  margin: 40px 0 0;
+  font-size: 14px;
+  color: #666979;
+  text-align: center;
+}
+
+/* entry */
+.hentry .entry-meta {
+  padding: 10px 10px 10px 24px;
+  border-left: 7px solid #eee;
+  margin: 40px 0 30px -30px;
+  color: #9f9f9f;
+  line-height: 1.1;
+}
+.entry-meta .updated, .entry-meta .author {
+  font-size: 16px;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, sans-serif;
+}
+.hentry .entry-title {
+  margin: 0;
+}
+.hentry .entry-title a {
+  text-decoration: none;
+}
+.entry-content {
+  margin-bottom: 60px;
+}
+.hentry .vcard {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.entry-list .hentry {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+.entry-item {
+  padding: 10px 0;
+  zoom: 1;
+}
+.entry-item:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.entry-item .entry-title {
+  margin: 0;
+  font-size: 24px;
+  float: left;
+}
+.entry-item .entry-title a {
+  text-decoration: none;
+}
+.entry-item .updated {
+  float: right;
+  font-size: 16px;
+  color: #9f9f9f;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* author card */
+.vcard {
+  position: relative;
+  padding: 16px 0 16px 80px;
+  font-size: 18px;
+  min-height: 60px;
+}
+.vcard .avatar {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+.vcard img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+.vcard .author-links a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.vcard .fn {
+  margin-right: 14px;
+}
+.vcard .icon {
+  margin: 0 2px;
+  vertical-align: middle;
+}
+.vcard .prose {
+  color: #697386;
+  margin: .2em 0;
+  font-family: "Helvetica Neue", Helvetica, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+}
+.vcard .icon-twitter:hover {
+  color: #23acee;
+}
+.vcard .icon-weibo:hover {
+  color: #e32428;
+}
+
+/* Homepage */
+.homepage {
+  padding: 40px 0;
+}
+.homepage a {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 32%;
+  padding: 30px 0;
+  margin-right: 2%;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.homepage a.projects {
+  margin-right: 0;
+}
+.homepage a:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.homepage .icon {
+  font-size: 68px;
+}
+.homepage a h2 {
+  margin-bottom: 0;
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .homepage a {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .homepage .icon {
+    font-size: 48px;
+  }
+}

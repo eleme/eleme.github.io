@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 写点博客
 author: lepture
 categories: web

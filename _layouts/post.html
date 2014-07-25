@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="yue hentry" itemscope itemtype="http://schema.org/Article">
+  <div class="entry-meta">
+    <h2 class="entry-title" itemprop="name">{{ page.title }}</h2>
+    <time class="updated" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" pubdate>{{ page.date | date: "%B %d, %Y" }}</time>
+    {% if page.author %}
+    <span class="sep">—</span>
+    <span class="author">{{ page.author }}</span>
+    {% endif %}
+  </div>
+  <div class="entry-content" itemprop="articleBody">{{ content }}</div>
+  {% include author.html %}
+</div>

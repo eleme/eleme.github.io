@@ -16,9 +16,7 @@ layout: none
         {% assign author = site.data.members[post.author] %}
         <author>
             <name>{{ author.name }}</name>
-            {% if author.url %}
             <uri>{{ author.url }}</uri>
-            {% endif %}
         </author>
         {% endif %}
         <updated>{{ post.date | date_to_xmlschema }}</updated>

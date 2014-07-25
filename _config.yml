@@ -1,5 +1,6 @@
 name: Eleme
 url: "http://eleme.io"
+timezone: Asia/Shanghai
 
 markdown: redcarpet
 
@@ -14,3 +15,12 @@ pygments: true
 permalink: /blog/:year/:title/
 paginate: 50
 paginate_path: "blog/page/:num/"
+exclude:
+  - README.md
+  - Makefile
+
+nav:
+  - title: 博客
+    link: /blog/
+  - title: 关于
+    link: /about/
