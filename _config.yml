@@ -18,6 +18,7 @@ paginate_path: "blog/page/:num/"
 exclude:
   - README.md
   - Makefile
+  - fabfile.py
 
 disqus: eleme
 nav:
