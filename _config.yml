@@ -21,6 +21,7 @@ exclude:
   - fabfile.py
 
 disqus: eleme
+ga: "UA-2513347-13"
 nav:
   - title: 博客
     link: /blog/
