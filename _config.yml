@@ -11,7 +11,6 @@ redcarpet:
     - autolink
     - tables
 
-pygments: true
 permalink: /blog/:year/:title/
 paginate: 1000
 paginate_path: "blog/page/:num/"
