@@ -10,6 +10,7 @@ redcarpet:
     - no_intra_emphasis
     - autolink
     - tables
+    - strikethrough
 
 permalink: /blog/:year/:title/
 paginate: 1000
