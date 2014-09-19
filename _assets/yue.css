@@ -162,14 +162,15 @@
 .yue ul,
 .yue ol {
   margin: 0 0 24px 6px;
-  padding-left: 16px;
 }
 
 .yue ul {
+  padding-left: 16px;
   list-style-type: square;
 }
 
 .yue ol {
+  padding-left: 30px;
   list-style-type: decimal;
 }
 
