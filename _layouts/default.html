@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -7,21 +7,22 @@
   <link rel="alternate" type="application/atom+xml" title="Subscribe Feed" href="/feed.xml">
   <link rel="stylesheet" href="/static/vendor.css">
   <link rel="stylesheet" href="/static/site.css">
+  {% include meta.html %}
   {% include ga.html %}
 </head>
 <body>
-  <header id="header">
+  <header id="header" role="banner">
     <div class="container yue">
       <a class="logo" href="/">Eleme</a>
       {% include nav.html %}
     </div>
   </header>
-  <div id="main">
+  <div id="main" role="main">
     <div class="container">
       {{ content }}
     </div>
   </div>
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
     <div class="container yue">
       <p class="copyright">Shanghai ♥ <a href="http://ele.me/">Eleme</a></p>
     </div>

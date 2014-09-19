@@ -1,0 +1,15 @@
+{% if page.id %}
+<meta name="description" content="{{ page.excerpt|strip_html|strip_newlines }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:description" content="{{ page.excerpt|strip_html|strip_newlines }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="eleme.io">
+{% if page.author && page.author in site.data.members %}
+{% assign author = site.data.members[page.author] %}
+{% if author.twitter %}
+<meta name="twitter:creator" content="@{{ author.twitter }}">
+{% endif %}
+{% endif %}
+{% endif %}
